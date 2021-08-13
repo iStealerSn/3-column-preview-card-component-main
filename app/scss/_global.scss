@@ -23,7 +23,7 @@ h2 {
     font-family: $font-big-shoulders-display;
     font-weight: $font-bold;
     color: $very-light-gray;
-    font-size: 1.8rem;
+    font-size: $font-lg;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
 }
@@ -31,81 +31,7 @@ h2 {
 p {
     color: $transparent-white;
     line-height: 1.6;
-    margin-bottom: 2.8rem;
 }
-
-// Helper class built to be reused ----------------
-
-.container {
-    margin: 5.5rem 1.625rem 0 1.625rem;
-
-    @media screen and (min-width: $breakpoints-desktop) {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        margin: 10.625rem 16rem 0 16rem;
-        max-width: 1440px;
-    }
-}
-
-.bright-orange {
-    background-color: $bright-orange;
-
-    .card-content > a {
-        color: $bright-orange;
-    }
-}
-
-.dark-cyan {
-    background-color: $dark-cyan;
-
-    .card-content > a {
-        color: $dark-cyan;
-    }
-}
-
-.very-dark-cyan {
-    background-color: $very-dark-cyan;
-
-    .card-content > a {
-        color: $very-dark-cyan;
-    }
-}
-
-.br {
-
-    &-top-lr {
-        border-radius: 10px 10px 0 0;
-
-        @media screen and (min-width: $breakpoints-desktop) {
-            border-radius: 10px 0 0 10px;
-        }
-    }
-
-    &-bottom-lr {
-        border-radius: 0 0 10px 10px;
-
-        @media screen and (min-width: $breakpoints-desktop) {
-            border-radius: 0 10px 10px 0;
-        }
-    }
-}
-
-.btn {
-    border-radius: 25px;
-    background: white;
-    padding: 0.967rem 2.2rem;
-    position: absolute;
-    bottom: 2.813rem;
-
-    &:hover, &:focus {
-        color: $very-light-gray !important;
-        background-color: transparent;
-        border: 3px solid white;
-    }
-}
-
-// ----------------
 
 .card {
     height: 27.5rem;
@@ -113,8 +39,7 @@ p {
     position: relative;
 
     &:last-child {
-        margin-bottom: 5.5rem;
-
+        margin-bottom: 5.5rem; // sets the bottom margin for mobile viewport
     }
 
     @media screen and (min-width: $breakpoints-desktop) {
@@ -123,7 +48,7 @@ p {
         padding: 2.813rem 3.6rem;
         
         &:last-child {
-            margin-bottom: 0;
+            margin-bottom: 0; // reset the bottom margin for desktop viewport
     }
 }
 }
