@@ -50,16 +50,21 @@ p {
   margin-bottom: 2.8rem;
 }
 
-.grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-  place-items: center;
-}
-
 .container {
   margin: 5.5rem 1.625rem 0 1.625rem;
+}
+
+@media screen and (min-width: 85.375rem) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    margin: 10.625rem 16rem 0 16rem;
+    max-width: 1440px;
+  }
 }
 
 .bright-orange {
@@ -90,14 +95,28 @@ p {
   border-radius: 10px 10px 0 0;
 }
 
+@media screen and (min-width: 85.375rem) {
+  .br-top-lr {
+    border-radius: 10px 0 0 10px;
+  }
+}
+
 .br-bottom-lr {
   border-radius: 0 0 10px 10px;
+}
+
+@media screen and (min-width: 85.375rem) {
+  .br-bottom-lr {
+    border-radius: 0 10px 10px 0;
+  }
 }
 
 .btn {
   border-radius: 25px;
   background: white;
   padding: 0.967rem 2.2rem;
+  position: absolute;
+  bottom: 2.813rem;
 }
 
 .btn:hover, .btn:focus {
@@ -108,11 +127,22 @@ p {
 
 .card {
   height: 27.5rem;
-  padding: 2.813rem 3rem 2.813rem 3rem;
+  padding: 2.813rem 3rem;
+  position: relative;
 }
 
 .card:last-child {
   margin-bottom: 5.5rem;
+}
+
+@media screen and (min-width: 85.375rem) {
+  .card {
+    height: 31.25rem;
+    padding: 2.813rem 3.6rem;
+  }
+  .card:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .card-icon {
